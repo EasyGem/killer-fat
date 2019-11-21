@@ -1,0 +1,46 @@
+.hat
+  min-height: 100vh
+  color: $white
+  background-image: url('/img/hat-bg.jpg')
+  background-position: center center
+  background-size: cover
+  padding: 274px 0 200px 0
+  &__row
+    flex-direction: column
+    max-width: 580px
+  &__offer
+    margin-top: 80px
+    display: flex
+    align-items: center
+  &-offer__about
+    margin-left: 32px
+    h3
+      font-size: 32px
+      font-weight: bold
+    p
+      font-size: 14px
+      font-weight: 200
+
+  @include respond-to(md)
+    padding: 214px 0 120px 0
+    &__offer
+      .btn
+        padding: 16px 24px
+    &-offer__about
+      margin-left: 20px
+      h3
+        font-size: 24px
+
+  @include respond-to(sm)
+    &__row
+      h4
+        font-size: 18px
+    &__offer
+      flex-direction: column
+      .btn
+        width: 100%
+    &-offer__about
+      margin-left: 0
+      text-align: center
+      margin-top: 16px
+      

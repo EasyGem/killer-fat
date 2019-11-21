@@ -1,0 +1,44 @@
+.steps
+  padding: 100px 0 140px 
+  &__wrapper
+    margin: 80px -20px 0
+  &__item
+    flex: 0 0 calc(100% / 4 - 40px)
+    margin: 0 20px
+    position: relative
+  &-item__number
+    position: absolute
+    font-size: 64px
+    color: #e5e5e5
+    font-weight: bold
+    line-height: 1
+    top: 12px 
+    left: 120px
+  &-item__icon
+    height: 82px
+    width: 82px
+  &-item__desc
+    line-height: 1.5
+    margin-top: 16px
+
+  @include respond-to(lg)
+    &__item
+      flex: 1 0 calc(100% / 2 - 40px)
+      margin-bottom: 40px
+      min-width: 180px
+      max-width: 280px
+
+  @include respond-to(sm)
+    padding: 80px 0 100px 0
+    &__wrapper
+      margin-right: 0
+      margin-left: 0
+    &__item
+      margin-left: 0px
+    &-item__icon
+      height: 64px
+      width: 64px
+    &-item__number
+      font-size: 48px
+      top: 8px 
+      left: 100px

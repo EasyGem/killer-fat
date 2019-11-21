@@ -1,0 +1,22 @@
+.gallery
+  padding: 100px 0 80px 
+  &__images-wrapper
+    margin: -12px
+  &__image-item
+    flex: 0 0 calc(100% / 3 - 24px)
+    margin: 12px 
+    position: relative
+    img
+      top: 0
+      left: 0
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center center
+    &:after
+      content: ""
+      padding-top: 100%
+      width: 100%
+      display: block
+    

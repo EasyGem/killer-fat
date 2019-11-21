@@ -1,0 +1,50 @@
+.header
+  top: 0
+  left: 0
+  width: 100%
+  padding: 24px 0
+  z-index: 1
+  position: absolute
+  color: $white
+  &__row
+    align-items: center
+  &__logo
+    img
+      height: 110px
+  &__contacts
+    margin-right: 60px
+    text-align: right
+  &__btn
+    margin-right: 40px
+  &__socials
+    marging: 0 6px 0 -6px
+    img
+      height: 28px
+      width: 28px
+      margin: 0 6px
+
+  @include respond-to(lg)
+    &__contacts
+      margin-right: 32px
+    &__btn
+      margin-right: 24px
+    &__logo
+      img
+        height: 80px
+
+  @include respond-to(md)
+    &__btn
+      display: none
+
+  @include respond-to(sm)
+    &__contacts
+      margin-right: 0px
+      a
+        border-bottom: dotted 1px #fff
+    &__logo
+      img
+        height: 64px
+    &__socials
+      display: none
+
+    

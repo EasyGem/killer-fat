@@ -1,0 +1,178 @@
+.ration
+  padding: 80px 0
+  &__menu
+    flex: 0 0 580px
+  &-menu__dates
+    margin-top: 24px
+    display: flex
+    flex-wrap: wrap
+    span 
+      color: $text-primary-l-3
+      margin-right: 20px
+      margin-top: 4px
+      cursor: pointer
+      &:last-child
+        margin-right: 0
+      &.active 
+        color: $text-primary
+  &__plans
+    flex: 0 0 460px
+
+  &-plans__title
+    font-size: 36px
+
+  &__plan-item
+    padding: 20px
+    background-color: #fff
+    display: flex
+    align-items: flex-end
+    border-radius: 4px
+    margin-top: 16px
+    cursor: pointer
+    transition: .25s ease
+    position: relative
+    &:hover
+      box-shadow: 0 6px 20px 0px rgba(0,0,0,0.075)
+    &.active:after
+      content: ""
+      position: absolute
+      height: 100%
+      width: 6px
+      left: 0
+      top: 0
+      border-radius: 4px 0 0 4px
+      background-color: $primary
+
+  &-plan-item__duration
+    font-size: 24px
+    width: 100px
+    margin-right: 20px
+
+  &-plan-item__discount
+    font-size: 12px
+    letter-spacing: 5%
+    text-transform: uppercase
+    color: $primary
+    margin-bottom: 4px
+    margin-right: 20px
+
+  &-plan-item__price
+    font-size: 20px
+    font-weight: 200
+    color: $text-primary-l-2
+
+  &__total
+    font-size: 34px
+    font-weight: bold
+    margin-top: 48px
+
+  &__order-btn
+    min-width: 215px
+    
+  &-menu__dishes-wrapper
+    display: flex
+    flex-wrap: wrap
+    margin: 8px -12px -12px -12px
+    
+  &-menu-dish-item__image
+    position: absolute
+    height: 100%
+    width: 100%
+    object-fit: cover
+    object-position: center center
+    
+  &-menu-dish-item__desc
+    color: $white
+    position: relative
+    z-index: 1
+    opacity: 0
+    transition: .25s ease
+    pointer-events: none
+    padding: 24px
+    padding-bottom: 0
+    background-color: rgba(34,34,34,.85)
+    cursor: default
+    height: 100%
+    h4
+      line-height: 1.25
+    .capture
+      margin-top: 4px
+      margin-bottom: 12px
+      color: $text-primary-l-4
+      font-size: 11px
+      line-height: 1.25
+    table
+      font-size: 14px
+      margin-bottom: 12px
+      td:last-child
+        padding-left: 8px
+
+  &-menu-dish-item__title
+    font-weight: bold
+
+  &-menu-dish-item__calories
+    font-weight: 600
+    
+  &-menu__dish-item
+    height: 200px
+    margin: 12px
+    position: relative
+    flex: 0 0 calc(100% / 2 - 24px)
+    &:hover, &.active
+      .ration-menu-dish-item__desc
+        opacity: 1
+        pointer-events: auto
+
+  @include respond-to(xl)
+    &__menu
+      flex: 0 0 440px
+    &__plans
+      flex: 0 0 410px
+    &-menu__dishes-wrapper
+      display: flex
+      flex-wrap: wrap
+      margin: 8px -8px -8px -8px
+    &-menu__dish-item
+      height: 200px
+      margin: 8px
+      position: relative
+      flex: 0 0 calc(100% / 2 - 16px)
+    &-menu-dish-item__desc
+      padding: 16px 12px 0 12px
+
+  @include respond-to(lg)
+    &__menu
+      flex: 0 0 100%
+      margin-top: 60px
+    &__plans
+      flex: 0 1 480px
+      order: -1
+    &-menu__dish-item
+      flex: 0 0 calc(100% / 3 - 16px)
+
+  @include respond-to(md)
+    &-menu__dish-item
+      flex: 0 0 calc(100% / 2 - 16px)
+
+  @include respond-to(sm)
+    padding: 60px 0
+
+    &-menu__dish-item
+      flex: 0 0 calc(100% / 2 - 16px)
+
+    &__plan-item
+      flex-wrap: wrap
+      padding-top: 16px
+      padding-bottom: 16px
+
+    &-plan-item__discount
+      order: 1
+      width: 100%
+
+    &-menu__dishes-wrapper
+      margin: 8px 0
+    
+    &-menu__dish-item
+      flex: 0 0 100%
+      margin: 8px 0
+

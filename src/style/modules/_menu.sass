@@ -1,0 +1,126 @@
+.menu
+  background-color: $text-primary
+  color: $white
+  padding: 80px 0 20px 0
+
+  &__row
+    margin: 0 -16px
+    margin-top: 60px
+    margin-bottom: 100px
+
+  &__call-us
+    margin-top: 12px
+    display: flex
+    align-items: center
+    p
+      max-width: 360px
+      text-align: right
+      margin-right: 20px
+      color: $text-primary-l-3
+      font-size: 16px
+      line-height: 1.3
+
+  &__menu-item
+    flex: 0 0 calc(100% / 5 - 32px)
+    margin: 0 16px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: 28px 0 0 0
+    cursor: pointer
+    &:hover
+      .menu-item__image
+        transform: scale(1.1)
+
+  &-item__image
+    width: 140px
+    transition: .25s ease
+
+  &-item__name
+    margin-top: 32px
+    font-weight: bold
+    text-align: center
+    span 
+      margin-top: 8px
+      color: $text-primary-l-2
+      font-weight: 400
+      font-size: 14px
+
+  &-target__aim
+    height: 180px
+    width: 180px
+    position: absolute
+    background-image: url('/img/icons/aim.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    opacity: .4
+    transition: .25s ease
+
+  &__target-item
+    flex: 0 0 calc(100% / 5 - 32px)
+    margin: 0 16px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 180px
+    flex-direction: column
+    cursor: pointer
+    &:hover
+      .menu-target__aim
+        opacity: .9
+        transform: scale(.9)
+
+  &-target__calories
+    font-size: 36px
+    font-weight: bold
+    margin-top: 20px
+    margin-bottom: 4px
+    line-height: 1
+
+  @include respond-to(xl)
+    &-item__image
+      width: 120px
+    
+    &-target__aim
+      height: 152px
+      width: 152px
+
+    &__menu-item
+      flex: 0 0 calc(100% / 5 - 24px)
+      margin: 0 12px
+
+    &__target-item
+      height: 152px
+    
+    &__target-item
+      flex: 1
+      min-width: 140px
+
+  @include respond-to(lg)
+    &__call-us
+      p
+        display: none
+    &__menu-item
+      flex: 1
+      min-width: 180px
+      margin-bottom: 40px
+    &__target-item
+      margin-bottom: 40px
+
+    &__row
+      margin-left: 0
+      margin-right: 0
+
+  @include respond-to(sm)
+    &__call-us
+      display: none
+    &__menu-item
+      flex: 1
+      min-width: 160px
+    &__row
+      margin-bottom: 40px
+      margin-top: 40px
+
