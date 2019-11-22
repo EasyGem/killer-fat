@@ -1,31 +1,31 @@
 .footer
   .l-container
-    .l-row
-      .footer__payment
+    .l-row.footer__first-row
+      a(href="#contact").footer__payment
         span Оплачивайте заказы с любой карты
         .footer__payment-icons
           img(src="/img/icons/visa.svg" alt="")
-          img(src="/img/icons/visa.svg" alt="")
-          img(src="/img/icons/visa.svg" alt="")
+          img(src="/img/icons/master-card.svg" alt="")
+          img(src="/img/icons/mir.svg" alt="")
 
       .l-spacer
       
       .footer__contacts
-        h5 8 (999) 220-35-35
-        p Ежедневно с 11:00 до 23:00
+        h5.font-weight-bold: a(href="tel:8 (999) 220-35-35") 8 (999) 220-35-35
+        p.font-size-14 Ежедневно с 11:00 до 23:00
         
       .footer__btn
-        a.btn.btn--small Заказать звонок
+        a(href="#contact").btn.btn--small Заказать звонок
 
       .footer__socials
-        img(src="/img/icons/instagram.svg" alt="")
-        img(src="/img/icons/instagram.svg" alt="")
+        a(href="https://www.instagram.com/killerfat.msk/" target="_blank"): img(src="/img/icons/instagram.svg" alt="")
+        a(href="https://fb.me/killerfat.msk" target="_blank"): img(src="/img/icons/facebook.svg" alt="")
 
     .l-row
       .footer__address ООО «КУЛЬТФУД.РУ» <br>124460, Москва, г. Зеленоград <br> пр-кт Генерала Алексеева, д. 42, корп./ст.с2, кв./оф.2а /6
     
-    .l-row
+    .l-row.footer__low
       p KillerFat © 2019. Все права защищены
       .l-spacer
-      p: a(href="#") Политика конфиденциальности
+      p: a(href="#").underlined Политика конфиденциальности
       

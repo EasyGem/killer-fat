@@ -9,44 +9,46 @@
             p С 19:00 до 23:00. Нужно другое время или точный час? Постараемся, но не гарантируем.
             
         .contact-facility__item
-          img(src="/img/icons/calendar.svg" alt="").contact-facility-item__icon
+          img(src="/img/icons/box-hands.svg" alt="").contact-facility-item__icon
           .contact-facility-item__info 
-            h4 Привозим ежедневно
-            p С 19:00 до 23:00. Нужно другое время или точный час? Постараемся, но не гарантируем.
+            h4 Если вас нет на месте
+            p Оставим на охране, у соседей или на ручке двери. Конечно, по договоренности.
 
         .contact-facility__item
-          img(src="/img/icons/calendar.svg" alt="").contact-facility-item__icon
+          img(src="/img/icons/wallet.svg" alt="").contact-facility-item__icon
           .contact-facility-item__info 
-            h4 Привозим ежедневно
-            p С 19:00 до 23:00. Нужно другое время или точный час? Постараемся, но не гарантируем.
+            h4 Способы оплаты
+            p При получении — наличными курьеру. При оформлении заказа — дебетовой или кредитной картой.
 
         .contact-facility__item
-          img(src="/img/icons/calendar.svg" alt="").contact-facility-item__icon
+          img(src="/img/icons/schedule.svg" alt="").contact-facility-item__icon
           .contact-facility-item__info 
-            h4 Привозим ежедневно
-            p С 19:00 до 23:00. Нужно другое время или точный час? Постараемся, но не гарантируем.
+            h4 График доставки
+            p Заказать доставку на завтра по Москве и Зеленограду можно до 18:00. Изменить адрес — до 16:00 дня доставки.
 
       .l-spacer
 
-      .contact__form
-        h2 Отправить заявку
-        span Мы перезвоним вам ответим на любые вопросы
+      form.contact__form
+        h2: a(name="contact") Отправить заявку
+        span.mt-3.font-weight-200.mb-10.mb-4-sm Мы перезвоним вам ответим на любые вопросы
+
+        .text-field.mt-5
+          span.text-field__label Имя:
+          input(type="text" placeholder="Александр" name="orderCustomerName").text-field__input.orderCustomerName
+          span.text-field__hint.danger
 
         .text-field 
-          span.text-field__label Имя
-          input(type="text" placeholder="Александр").text-field__input
+          span.text-field__label Телефон:
+          input(type="text" placeholder="+7 (___) ___-__-__" name="orderCustomerPhone").text-field__input.orderCustomerPhone
           span.text-field__hint
 
-        .text-field 
-          span.text-field__label Телефон
-          input(type="text" placeholder="+9 (___) ___-__-__").text-field__input
-          span.text-field__hint
-
-        span 
+        span.text-primary-l-2.font-size-14.mt-6
           | Нажимая кнопку “Отправить”, я соглашаюсь с условиями 
-          a(href="#") Политики Конфиденциальности сайта
+          a(href="#").underlined политики конфиденциальности сайта
 
-        a.btn Отправить
+        a.btn.mt-8.contact-form__submit.sumbitForm Отправить
+
+        .announce-block.mt-4.font-size-14.text-primary-l-2
 
 
 

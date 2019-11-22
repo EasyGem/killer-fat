@@ -1,0 +1,28 @@
+.modal#modal
+  .modal__content.stopPropagation
+    form.contact__form.modal__form
+      img.modal__close(src="/img/icons/cross.svg")#closeModal
+      h2: a(name="contact") Сделать заказ
+      span.mt-3.font-weight-200.mb-10.mb-4-sm Мы свяжемся с вами для подтверждения заказа и уточнения деталей
+
+      .text-field
+        span.text-field__label Имя:
+        input(type="text" placeholder="Александр" name="orderCustomerName").text-field__input.orderCustomerName
+        span.text-field__hint.danger
+
+      .text-field 
+        span.text-field__label Телефон:
+        input(type="text" placeholder="+7 (___) ___-__-__" name="orderCustomerPhone").text-field__input.orderCustomerPhone
+        span.text-field__hint
+    
+      .hidden
+        input(type="text" id="orderName" name="orderName" value="Питание в офисе")
+        input(type="text" id="orderDays" name="orderDays" value="1 день")
+        input(type="text" id="orderPrice" name="orderPrice" value="1190руб.")
+
+      span.text-primary-l-2.font-size-14.mt-6
+        | Нажимая кнопку “Отправить”, я соглашаюсь с условиями 
+        a(href="#").underlined политики конфиденциальности сайта
+
+      a.btn.mt-8.contact-form__submit.btn--small.sumbitForm Отправить заказ
+      .announce-block.mt-4.font-size-14.text-primary-l-2

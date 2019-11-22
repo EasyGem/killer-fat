@@ -1,8 +1,33 @@
 .reviews
   padding: 60px 0 140px 0
   &__items-wrapper
+    padding-top: 52px
     margin: 0 -16px
     width: auto
   &__item
     flex: 0 0 calc(100% / 2 - 32px)
     margin: 28px 16px
+    h4
+      font-weight: bold
+      margin-bottom: 20px
+    p
+      color: $text-primary-l-2
+      line-height: 1.5
+
+  @include respond-to(md)
+    &__items-wrapper
+      padding-top: 52px
+      margin: 0 
+    &__item
+      flex: 0 0 100%
+      margin: 28px 0
+
+  @include respond-to(sm)
+    padding: 40px 0 100px 0
+    &__items-wrapper
+      padding-top: 24px
+    &__item
+      h4
+        font-size: 20px
+      p
+        font-size: 16px

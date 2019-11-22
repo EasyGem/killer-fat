@@ -2,6 +2,9 @@
   padding: 100px 0 80px 
   &__images-wrapper
     margin: -12px
+    margin-top: 68px
+  h2
+    max-width: 680px
   &__image-item
     flex: 0 0 calc(100% / 3 - 24px)
     margin: 12px 
@@ -19,4 +22,28 @@
       padding-top: 100%
       width: 100%
       display: block
+
+  @include respond-to(lg)
+    &__image-item
+      flex: 0 0 calc(100% / 2 - 24px)
+
+  @include respond-to(md)
+    &__images-wrapper
+      margin: -8px
+      margin-top: 52px
+    &__image-item
+      flex: 0 0 calc(100% / 2 - 16px)
+      margin: 8px 
+    
+
+  @include respond-to(sm)
+    padding: 80px 0
+    &__images-wrapper
+      margin: -8px
+      margin-top: 52px
+      width: auto
+    &__image-item
+      flex: 1 1 auto
+      margin: 8px
+      min-width: 160px 
     
