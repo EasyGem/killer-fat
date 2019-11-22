@@ -70,11 +70,11 @@
     min-width: 215px
     
   &-menu__dishes-wrapper
-    display: none
+    display: none !important
     flex-wrap: wrap
     margin: 8px -12px -12px -12px
     &.active
-      display: flex
+      display: flex !important
     
   &-menu-dish-item__image
     position: absolute
@@ -131,8 +131,6 @@
     &__plans
       flex: 0 0 410px
     &-menu__dishes-wrapper
-      display: flex
-      flex-wrap: wrap
       margin: 8px -8px -8px -8px
     &-menu__dish-item
       height: 200px
@@ -159,13 +157,14 @@
   @include respond-to(sm)
     padding: 60px 0
 
-    &-menu__dish-item
-      flex: 0 0 calc(100% / 2 - 16px)
-
     &__plan-item
       flex-wrap: wrap
       padding-top: 16px
       padding-bottom: 16px
+
+    &-menu-dish-item__desc
+      opacity: 1
+      pointer-events: auto
 
     &-plan-item__discount
       order: 1
@@ -173,8 +172,13 @@
 
     &-menu__dishes-wrapper
       margin: 8px 0
+      width: calc(100vw - 32px) !important
+      height: 260px
+      overflow: hidden
     
     &-menu__dish-item
       flex: 0 0 100%
       margin: 8px 0
+      height: 240px
+      // max-width: 280px
 

@@ -1,5 +1,18 @@
 //= jquery.min.js
 //= jquery.maskedinput.min.js
+//= owl.carousel.min.js
+
+function initCarousel() {
+  console.log($(document).width(), 2)
+
+  if ($(document).width() < 560) {
+    $('.dishes-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      items: 1
+    })
+  }
+}
 
 function scrollTo(selector) {
   $([document.documentElement, document.body]).animate(
@@ -127,4 +140,5 @@ $(document).ready(function() {
   initRation()
   initForm()
   initQuestions()
+  initCarousel()
 })

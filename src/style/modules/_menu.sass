@@ -29,6 +29,7 @@
     flex-direction: column
     padding: 28px 0 0 0
     cursor: pointer
+    justify-content: flex-start
     &:hover
       .menu-item__image
         transform: scale(1.1)
@@ -119,8 +120,25 @@
       display: none
     &__menu-item
       flex: 1
-      min-width: 160px
+      min-width: 140px
+
+    &-item__image
+      width: 100px
+
     &__row
       margin-bottom: 40px
       margin-top: 40px
+
+    &-target__aim
+      height: 134px
+      width: 134px
+
+    &__target-item
+      height: 134px
+      min-width: 120px
+
+    &__target-item
+      &:hover
+        .menu-target__aim
+          transform: scale(1)
 
